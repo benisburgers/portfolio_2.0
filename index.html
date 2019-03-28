@@ -5,77 +5,64 @@
   <title></title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <link rel="stylesheet" href="reset.css"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-  <div class="page">
-    <nav>
-      This is my navbar
+  <div class="content">
+    <nav class="navbar">
+      <ul>
+        <li>Beni</li>
+        <li>Cases</li>
+        <li>Contact</li>
+      </ul>
     </nav>
-
-    <div class="header-and-intro-container">
-      <header>
+    <section class="intro">
+      <h1>Benjamin Bar-Gera</h1>
+      <h2>Web Developer and Outdoor Enthusiast</h2>
+      <div class="intro-image shift left">
         <div class="image-container">
-          <img src="portrait.jpg" alt="My face">
-        </div>
-      </header>
-      <section class="intro">
-        <h1>Benjamin Bar-Gera</h1>
-        <p class="into-paragraph">Welcome to my portfolio. My name's Beni and I'm 25 years old.
-          After graduating with a degree in International Relations, I worked as a ski instructor, rafting guide, and hiking guide in Switzerland and Canada.
-          I love to be outside.
-        </p>
-        <p class="into-paragraph">I taught myself how to use HTML, CSS, and Javscript. Additionaly, I am fluent in ES6, SASS, and advanced CSS, such as Flex and Grid.
-        As much as I enjoy using frameworks, I believe that every programmer must know how to build a website using HTML, CSS, and Javascript. Currently, I'm learning React.
-       </p>
-      </section>
-    </div>
-
-    <section class="cases">
-      <h2 class="cases-title">Cases</h2>
-      <h3>Click on them to find out more</h3>
-      <div class="case-container">
-        <div class="case">
-          <h3 class="case-title">Advance Website Animations</h3>
-          <div class="case-img-container">
-            <img src="screenshot_advance.png" alt="advance website screenshot">
-          </div>
-          <p class="case-description">I used a ton of SASS and a javascript library named viewport-checker to animate all the statistics on this website.</p>
-        </div>
-
-        <div class="case">
-          <h3 class="case-title">Newsletter Sign-Up Page</h3>
-          <div class="case-img-container">
-            <img src="screenshot_binelli.jpg" alt="advance website screenshot">
-          </div>
-          <p class="case-description">I used jquery in order to verify the sign-up form and provide the user with real-time feedback. Additionaly, I used flex-box in order to construct the website.</p>
-        </div>
-
-        <div class="case">
-          <h3 class="case-title">HADO Event Landing Page</h3>
-          <div class="case-img-container">
-            <img src="screenshot_hado.jpg" alt="advance website screenshot">
-          </div>
-          <p class="case-description">I used Foundation to create this website. Additionaly, I used SASS and viewport checker for the flickering effects, and I used juery to verify the form.</p>
+          <img src="beni.jpeg" alt="A picture of a handsome man">
         </div>
       </div>
-
-    </div>
+      <div class="intro-text shift right">
+        <p>My name's Beni and I'm 25 years old. After graduating with a degree in International Relations, I worked as a ski instructor, rafting guide, and hiking guide in Switzerland and Canada.</p>
+        <p>While working outside, I taught myself how to program. In January 2019, I’ve started an internship as a web developer at a media agency in Zurich. I am currently working there and learning a lot.</p>
+      </div>
     </section>
-
-    <section class="contact">
-      <h2 class="contact-title">Contact</h2>
-      <p>
-        Feel free to message me at <a href="mailto:benibargera@gmail.com">benibargera@gmail.com</a>
-      </p>
+    <section class="cases">
+      <h2>Cases</h2>
+      <h3>This is what I've made</h3>
+      <div class="case shift left">
+        <div class="image-container">
+          <img src="screenshot_cropped_hado.jpg" alt="Screenshot of Webpage (HADO)">
+        </div>
+        <h3>HADO Event Page</h3>
+      </div>
+      <div class="case shift right">
+        <div class="image-container">
+          <img src="screenshot_cropped_advance.jpg" alt="Screenshot of this Portfolio">
+        </div>
+        <h3>This Portfolio</h3>
+      </div>
+      <div class="case shift left">
+        <div class="image-container">
+          <img src="screenshot_cropped_advance.jpg" alt="Screen of Webpage (Advance)">
+        </div>
+        <h3>Advance</h3>
+      </div>
+      <div class="case shift right">
+        <div class="image-container">
+          <img src="screenshot_cropped_binelli.jpg" alt="Screen of Webpage (Binelli)">
+        </div>
+        <h3>Binelli</h3>
+      </div>
     </section>
-
-    <footer>
-      <p>This is the footer</p>
-    </footer>
   </div>
-  <script src="sript.js"></script>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="node_modules/jquery-viewport-checker/src/jquery.viewportchecker.js"></script>
+  <script src="script.js" charset="utf-8"></script>
 </body>
 
 </html>
