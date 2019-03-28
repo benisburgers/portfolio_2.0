@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
   width: 100%;
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
 }
 
 img {
@@ -24,6 +28,8 @@ nav ul li {
 
 h1, h2, h3 {
   text-align: center;
+  font-weight: 400;
+  line-height: 1.15;
 }
 
 .shift {
@@ -53,11 +59,31 @@ h1, h2, h3 {
   transform: translateX(25%);
 }
 
+section {
+  margin-top: 40px;
+}
+
 section > div {
   margin-bottom: 40px;
 }
 section > div:last-child {
   margin-bottom: 0;
+}
+
+p {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h1 {
+  font-size: 67.5px;
 }
 
 /*# sourceMappingURL=style.css.map */
