@@ -13,7 +13,6 @@ img {
 }
 
 h1, h2, h3 {
-  text-align: center;
   font-weight: 400;
   line-height: 1.15;
 }
@@ -64,23 +63,33 @@ header {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease-in-out;
+  width: 100%;
 }
-.shift > * {
-  max-width: 75%;
+.shift.expand {
+  background: blue;
+}
+.shift.expand .collapsed-content {
+  max-height: none;
 }
 
 .shift.left {
   align-items: flex-end;
   background-color: #2e7369;
+  text-align: right;
 }
 
 .shift.right {
   align-items: flex-start;
-  background-color: #52A398;
+  background-color: #52a398;
+  text-align: left;
 }
 
 .shift.left.active {
   transform: translateX(-25%);
+}
+.shift.left.active.expand {
+  transform: translateX(calc(-25% / 1.25));
+  width: calc(100% + 25%);
 }
 
 .shift.right.active {
@@ -101,6 +110,41 @@ section > div:last-child {
 .text-container {
   padding: 10px 15px;
   box-sizing: border-box;
+}
+
+.shift-content {
+  width: 75%;
+  max-width: calc(.75 * 900px);
+}
+
+.collapsed-content {
+  background: red;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.case-exit-button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 26px;
+}
+.case-exit-button span {
+  background: red;
+  height: 2px;
+  width: 26px;
+}
+
+.case.left .case-exit-button {
+  top: 0;
+  left: 0;
+}
+
+.case.right .case-exit-button {
+  top: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
