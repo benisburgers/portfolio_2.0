@@ -65,11 +65,26 @@ header {
   transition: transform 0.2s ease-in-out;
   width: 100%;
 }
-.shift.expand {
-  background: blue;
+
+.collapsed-content {
+  overflow: hidden;
+  max-height: 0;
 }
-.shift.expand .collapsed-content {
+
+.case.left .case-exit-button {
+  top: 0;
+  left: 0;
+}
+
+.shift.active.expand.expand {
+  transform: translateX(0);
+  width: calc(100%);
+}
+.shift.active.expand.expand .collapsed-content {
   max-height: none;
+}
+.shift.active.expand.expand .case-exit-button {
+  opacity: 1;
 }
 
 .shift.left {
@@ -86,10 +101,6 @@ header {
 
 .shift.left.active {
   transform: translateX(-25%);
-}
-.shift.left.active.expand {
-  transform: translateX(calc(-25% / 1.25));
-  width: calc(100% + 25%);
 }
 
 .shift.right.active {
@@ -117,34 +128,30 @@ section > div:last-child {
   max-width: calc(.75 * 900px);
 }
 
-.collapsed-content {
-  background: red;
-  overflow: hidden;
-  max-height: 0;
+.case.right .case-exit-button {
+  top: 0;
+  right: 0;
 }
 
 .case-exit-button {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 26px;
   height: 26px;
+  opacity: 0;
 }
 .case-exit-button span {
-  background: red;
+  background: black;
   height: 2px;
   width: 26px;
 }
-
-.case.left .case-exit-button {
-  top: 0;
-  left: 0;
+.case-exit-button span:first-child {
+  transform: translateY(50%) rotate(45deg);
 }
-
-.case.right .case-exit-button {
-  top: 0;
-  right: 0;
+.case-exit-button span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 /*# sourceMappingURL=style.css.map */

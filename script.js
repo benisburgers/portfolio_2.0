@@ -9,4 +9,11 @@ $(document).ready(function(){
   	scrollHorizontal: false // Set to true if your website scrolls horizontal instead of vertical.
   });
 
+  $(function() {
+      $('.case').on('click', function() {
+          console.log(this);
+          $(this).toggleClass('expand');
+      });
+  });
+
 });
