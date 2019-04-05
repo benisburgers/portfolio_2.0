@@ -59,32 +59,22 @@ header {
   background: #efd1cd;
 }
 
+section {
+  margin-top: 40px;
+}
+
+section > div {
+  margin-bottom: 40px;
+}
+section > div:last-child {
+  margin-bottom: 0;
+}
+
 .shift {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease-in-out;
   width: 100%;
-}
-
-.collapsed-content {
-  overflow: hidden;
-  max-height: 0;
-}
-
-.case.left .case-exit-button {
-  top: 0;
-  left: 0;
-}
-
-.shift.active.expand.expand {
-  transform: translateX(0);
-  width: calc(100%);
-}
-.shift.active.expand.expand .collapsed-content {
-  max-height: none;
-}
-.shift.active.expand.expand .case-exit-button {
-  opacity: 1;
 }
 
 .shift.left {
@@ -107,15 +97,27 @@ header {
   transform: translateX(25%);
 }
 
-section {
-  margin-top: 40px;
+.shift.active.expand {
+  transform: translateX(0);
+  background: red !important;
+}
+.shift.active.expand .collapsed-content {
+  opacity: 1;
+}
+.shift.active.expand .case-exit-button {
+  opacity: 1;
 }
 
-section > div {
-  margin-bottom: 40px;
+.collapsed-content {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0px;
+  transition: max-height 0.2s ease-in-out, opacity 0.4s ease-in-out;
 }
-section > div:last-child {
-  margin-bottom: 0;
+
+.case.left .case-exit-button {
+  top: 0;
+  left: 0;
 }
 
 .text-container {

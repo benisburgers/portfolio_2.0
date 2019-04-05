@@ -64,37 +64,24 @@ header {
   background: $soft;
 }
 
+section {
+  margin-top: 40px;
+}
+
+section {
+  & > div {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .shift {
   display: flex;
   flex-direction: column;
   transition: transform .2s ease-in-out;
   width: 100%;
-}
-
-
-.collapsed-content {
-  overflow: hidden;
-  max-height: 0;
-}
-
-.case.left {
-  .case-exit-button {
-    top: 0;
-    left: 0;
-  }
-}
-
-.shift.active.expand {
-  &.expand {
-    transform: translateX(0);
-    width: calc(100%);
-    .collapsed-content {
-      max-height: none;
-    }
-    .case-exit-button {
-      opacity: 1;
-    }
-  }
 }
 
 .shift.left {
@@ -116,16 +103,28 @@ header {
   transform: translateX(#{$shift-translate-x});
 }
 
-section {
-  margin-top: 40px;
+.shift.active.expand {
+  transform: translateX(0);
+  background: red !important;
+  .collapsed-content {
+    opacity: 1;
+  }
+  .case-exit-button {
+    opacity: 1;
+  }
 }
 
-section {
-  & > div {
-    margin-bottom: 40px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+.collapsed-content {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0px;
+  transition: max-height .2s ease-in-out, opacity .4s ease-in-out;
+}
+
+.case.left {
+  .case-exit-button {
+    top: 0;
+    left: 0;
   }
 }
 
