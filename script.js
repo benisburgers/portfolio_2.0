@@ -4,7 +4,7 @@ $(document).ready(function(){
       classToAdd: 'active', // Class to add to the elements when they are visible,
       classToRemove: 'invisible', // Class to remove before adding 'classToAdd' to the elements
       invertBottomOffset: true, // Add the offset as a negative number to the element's bottom
-      repeat: true, // Add the possibility to remove the class if the elements are not visible
+      repeat: false, // Add the possibility to remove the class if the elements are not visible
       callbackFunction: function(elem, action){}, // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
   	scrollHorizontal: false // Set to true if your website scrolls horizontal instead of vertical.
   });
@@ -33,9 +33,13 @@ $(document).ready(function(){
   }
 
   function closeCase(el) {
+    //find collapsed-content
     var collapsedContent = el.find('.collapsed-content');
+    //reduce max-height of collapsedContent back to 0
     collapsedContent.css('max-height','0');
+    //remove class expand from case
     el.removeClass('expand');
+    //set global variable openCase to 'false', signifiying no open cases
     caseOpen = false;
   }
 

@@ -19,10 +19,18 @@ h1, h2, h3 {
 
 p {
   font-size: 20px;
+  margin: 10px 0px;
+}
+p a {
+  color: #5b323a;
+}
+p a:hover {
+  text-decoration: underline;
 }
 
 h3 {
   font-size: 25px;
+  margin: 15px 0px;
 }
 
 h2 {
@@ -78,15 +86,16 @@ section > div:last-child {
 }
 
 .shift.left {
-  align-items: flex-end;
   background-color: #2e7369;
+  align-items: flex-end;
+}
+.shift.left h3 {
   text-align: right;
 }
 
 .shift.right {
   align-items: flex-start;
   background-color: #52a398;
-  text-align: left;
 }
 
 .shift.left.active {
@@ -99,7 +108,9 @@ section > div:last-child {
 
 .shift.active.expand {
   transform: translateX(0);
-  background: red !important;
+}
+.shift.active.expand .shift-content {
+  width: 100%;
 }
 .shift.active.expand .collapsed-content {
   opacity: 1;
@@ -113,6 +124,9 @@ section > div:last-child {
   opacity: 0;
   max-height: 0px;
   transition: max-height 0.2s ease-in-out, opacity 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .case.left .case-exit-button {
@@ -121,13 +135,14 @@ section > div:last-child {
 }
 
 .text-container {
-  padding: 10px 15px;
   box-sizing: border-box;
+  padding: 15px 10px;
 }
 
 .shift-content {
   width: 75%;
-  max-width: calc(.75 * 900px);
+  transition: width 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 .case.right .case-exit-button {
@@ -154,6 +169,65 @@ section > div:last-child {
 }
 .case-exit-button span:last-child {
   transform: translateY(-50%) rotate(-45deg);
+}
+
+.color-choices {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 20px;
+  display: flex;
+}
+.color-choices div {
+  flex: 1;
+  height: 100%;
+}
+.color-choices .primary {
+  background: #2e7369;
+}
+.color-choices .primary-dark {
+  background: #163f3d;
+}
+.color-choices .primary-light {
+  background: #52a398;
+}
+.color-choices .highlight {
+  background: #5b323a;
+}
+.color-choices .soft {
+  background: #efd1cd;
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  color: #5b323a;
+  background: rgba(91, 50, 58, 0);
+  transition: background 0.2s ease-in-out;
+  border-radius: 4px;
+  padding: 7px 14px;
+  border: none;
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.button:hover {
+  background: rgba(91, 50, 58, 0.16);
+}
+
+.button.outlined {
+  border: 2px solid #5b323a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.side-padding {
+  padding: 0px 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
