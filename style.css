@@ -5,6 +5,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.45;
+  background: #233D4D;
 }
 
 img {
@@ -97,6 +98,9 @@ section > div:last-child {
   align-items: flex-start;
   background-color: #52a398;
 }
+.shift.right h3 {
+  text-align: left;
+}
 
 .shift.left.active {
   transform: translateX(-25%);
@@ -123,7 +127,7 @@ section > div:last-child {
   overflow: hidden;
   opacity: 0;
   max-height: 0px;
-  transition: max-height 0.2s ease-in-out, opacity 0.4s ease-in-out;
+  transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

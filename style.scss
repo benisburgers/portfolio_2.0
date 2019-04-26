@@ -15,6 +15,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.45;
+  background: #233D4D;
 }
 img {
   max-width: 100%;
@@ -103,6 +104,9 @@ section {
 .shift.right {
   align-items: flex-start;
   background-color: $primary-light;
+  h3 {
+    text-align: left;
+  }
 }
 
 .shift.left.active {
@@ -123,13 +127,16 @@ section {
   .case-exit-button {
     opacity: 1;
   }
+  // .case-main-image {
+  //   filter: none;
+  // }
 }
 
 .collapsed-content {
   overflow: hidden;
   opacity: 0;
   max-height: 0px;
-  transition: max-height .2s ease-in-out, opacity .4s ease-in-out;
+  transition: max-height .2s ease-in-out, opacity .2s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -255,3 +262,11 @@ a {
  .side-padding {
    padding: 0px 15px;
  }
+
+// .case-main-image {
+//   filter: grayscale(100%);
+//   transition: filter .2s ease-in-out;
+//   &:hover {
+//     filter: none;
+//   }
+// }
